@@ -1,0 +1,9 @@
+/* 기본 화면 전체 레이아웃 설정 */
+body {
+  width: 1440px;
+  height: 1567px;
+}
+
+div {
+  margin-bottom: 20px; /* 아래쪽 간격 20px 설정 */
+}
