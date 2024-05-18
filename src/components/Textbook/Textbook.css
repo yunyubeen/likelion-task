@@ -1,0 +1,23 @@
+.textbook-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* 전체 너비 설정 */
+  border-bottom: 1px solid var(--main-5, #abe2df);
+}
+
+.textbook-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 32px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.textbook-text {
+  width: 488px; /* 텍스트의 고정 너비 설정 */
+}
+
+.textbook-icon {
+  width: 34.506px;
+  height: 34.506px;
+  flex-shrink: 0;
+}

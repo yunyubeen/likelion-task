@@ -1,13 +1,14 @@
 #button {
   display: flex;
   width: 378px;
-  height: 52px;
+  height: 18px;
   padding: 17px 0px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
   border-radius: 7px;
   background: var(--Main, #85d6d1);
+  margin: 53px;
 }
 
 /* 버튼 요소 스타일 설정 */
@@ -18,7 +19,7 @@
   border: none;
   background-color: transparent; /* 버튼 배경색 투명 설정 */
   cursor: pointer; /* 마우스 커서 포인터로 변경 */
-  color: white; /* 버튼 텍스트 색상 설정 */
+  color: black; /* 버튼 텍스트 색상 설정 */
   font-size: 16px; /* 버튼 텍스트 크기 설정 */
   font-weight: bold; /* 버튼 텍스트 굵게 설정 */
 }

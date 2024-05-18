@@ -1,9 +1,6 @@
-/* 기본 화면 전체 레이아웃 설정 */
-body {
-  width: 1440px;
-  height: 1567px;
-}
-
-div {
-  margin-bottom: 20px; /* 아래쪽 간격 20px 설정 */
+.container {
+  padding-left: 59px;
+  padding-right: 86px;
+  /* 혹은 전체 여백을 같은 값으로 하고 싶다면 아래와 같이 설정 */
+  /* padding: 0 86px; */
 }
