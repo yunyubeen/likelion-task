@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 import 기본프로필 from "../assets/img/기본프로필 1.svg";
 import 가로형로고 from "../assets/img/가로형 로고.svg";
@@ -7,7 +7,7 @@ const Header = ({ status }) => {
   return (
     <div id="header">
       <div id="logo">
-        <img src={가로형로고} />
+        <img src={가로형로고} alt="로고" />
       </div>
       <div id="tab">
         <span>뉴스</span>
@@ -31,12 +31,14 @@ const Header = ({ status }) => {
       </div>
       <div id="status">
         {status === "로그인" ? (
-          <span>{status}</span>
+          <Link to="/login">
+            <span>{status}</span>
+          </Link>
         ) : (
           <>
             <span>{status}</span>
             &nbsp;
-            <img src={기본프로필} height={36} />
+            <img src={기본프로필} height={36} alt="프로필" />
           </>
         )}
       </div>
