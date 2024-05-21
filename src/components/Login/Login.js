@@ -1,10 +1,40 @@
 import React from "react";
+import "./Login.css";
+import kakaoIcon from "../../assets/img/kakao.png";
+import naverIcon from "../../assets/img/naver.png";
+import googleIcon from "../../assets/img/google.png";
 
 const Login = () => {
   return (
-    <div>
-      <h1>Login Page</h1>
-      {/* 로그인 폼을 여기에 추가 */}
+    <div className="login-container">
+      <h2>사용자 로그인</h2>
+      <form className="loginform">
+        <div className="login-data">
+          <label>이메일 주소</label>
+          <input type="email" id="email" />
+        </div>
+        <div className="login-data">
+          <label>비밀번호</label>
+          <input type="password" id="pwd" />
+        </div>
+        <div className="checkbox">
+          <input type="checkbox" id="remember" />
+          <label>아이디 기억하기</label>
+        </div>
+        <div>
+          <button type="submit" className="login-btn">
+            로그인
+          </button>
+        </div>
+      </form>
+      <div>
+        <p>이메일로 회원가입</p>
+        <div className="icons">
+          <img src={kakaoIcon} alt="kakao" />
+          <img src={naverIcon} alt="naver" />
+          <img src={googleIcon} alt="google" />
+        </div>
+      </div>
     </div>
   );
 };

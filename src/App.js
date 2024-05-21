@@ -38,7 +38,6 @@ function App() {
     <Router>
       <div className="container">
         <Header status={login} />
-        <Header status={myInfo} />
         <Routes>
           <Route path="/login" element={<Login />} />
 
@@ -46,6 +45,7 @@ function App() {
             path="/"
             element={
               <>
+                <Header status={myInfo} />
                 <Footer array={info} />
                 <Button text={text} />
                 <hr />
@@ -56,6 +56,7 @@ function App() {
             }
           />
         </Routes>
+        <Footer array={info} />
       </div>
     </Router>
   );
