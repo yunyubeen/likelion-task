@@ -1,11 +1,14 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-
-import Header from "./components/Header.js";
-import Footer from "./components/Footer.js";
-import Article from "./components/Article.js";
-import Button from "./components/Button.js";
-import Title from "./components/Title.js";
-import Textbook from "./components/Textbook/Textbook.js";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Article from "./components/Article";
+import Button from "./components/Button";
+import Title from "./components/Title";
+import Textbook from "./components/Textbook/Textbook";
+import Login from "./components/Login/Login";
+import Signup from "./components/Signup/Signup";
 
 function App() {
   const login = "로그인";
@@ -23,6 +26,8 @@ function App() {
   const textbooks = [
     {
       text: "주식 기본 용어, 알고 시작하자!",
+      imgSrc:
+        "https://s3-alpha-sig.figma.com/img/56bd/01c3/ee396acdecf45aa83c16732f6aa5107e?Expires=1716768000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HGgKo5BOKo54Y59rPUZHfEXEsEYRjG5sCdM1ZIrSa9-~n4PNMNfeSZRGK-or7DQ4S7kNUhMvwyq4tugYbNj7xNEXRALIVgzA-yIRU3UbCP0XyFT6wMXWea7vj-73bUtv0ihpBdBYZakRStlTy5rwgHg8OOs9lQNHygmnNGbjYALU0WmzVb-BHGwLwJ5xXullpv7wIjKCyvR0Kcc-dT-M0IqSmKHgcKXyEs6Ll77XCm4Q0J9lPAVbqUfwQZyAkctb16QmATwfGhdLWiLO0QjJ~XDUI4uUkG7CUpAZU4SgBipN6VUZ1OZkVAVn7nEL~7DWB6fX628bFVpHe-3e9Xrmnw__",
     },
   ];
 
@@ -31,16 +36,31 @@ function App() {
   const subtitle = "부제목";
 
   return (
-    <div className="container">
-      <Header status={login} />
-      <Header status={myInfo} />
-      <Footer array={info} />
-      <Button text={text} />
-      <hr />
-      <Article array={news} />
-      <Textbook textbook={textbooks} />
-      <Title title={title} subtitle={subtitle} />
-    </div>
+    <Router>
+      <div className="container">
+        <Header status={login} />
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+
+          <Route
+            path="/"
+            element={
+              <>
+                <Header status={myInfo} />
+                <Footer array={info} />
+                <Button text={text} />
+                <hr />
+                <Article array={news} />
+                <Textbook textbook={textbooks} />
+                <Title title={title} subtitle={subtitle} />
+              </>
+            }
+          />
+        </Routes>
+        <Footer array={info} />
+      </div>
+    </Router>
   );
 }
 

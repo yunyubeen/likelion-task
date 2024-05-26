@@ -1,14 +1,20 @@
 #footer {
-  width: 350px;
-  font-size: 13px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  margin: 10px;
-  padding: 30px;
-  border: none;
+  width: 100%;
+  padding: auto;
+  gap: 19.771px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-bottom: 64px;
 }
 
 #footer > span {
-  color: gray;
+  color: #929292;
+  font-family: "Noto Sans";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
