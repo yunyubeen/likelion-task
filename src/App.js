@@ -8,6 +8,7 @@ import Button from "./components/Button";
 import Title from "./components/Title";
 import Textbook from "./components/Textbook/Textbook";
 import Login from "./components/Login/Login";
+import Signup from "./components/Signup/Signup";
 
 function App() {
   const login = "로그인";
@@ -40,6 +41,7 @@ function App() {
         <Header status={login} />
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
 
           <Route
             path="/"

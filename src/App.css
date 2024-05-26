@@ -1,6 +1,7 @@
 .container {
   padding-left: 59px;
   padding-right: 86px;
-  /* 혹은 전체 여백을 같은 값으로 하고 싶다면 아래와 같이 설정 */
-  /* padding: 0 86px; */
+  padding: 0 86px;
+  display: flex;
+  flex-direction: column;
 }

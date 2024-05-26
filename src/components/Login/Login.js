@@ -3,6 +3,7 @@ import "./Login.css";
 import kakaoIcon from "../../assets/img/kakao.png";
 import naverIcon from "../../assets/img/naver.png";
 import googleIcon from "../../assets/img/google.png";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -27,9 +28,14 @@ const Login = () => {
           </button>
         </div>
       </form>
+
       <div>
-        <p>이메일로 회원가입</p>
-        <div className="icons">
+        <p>
+          <Link to="/signup" className="custom-link">
+            이메일로 회원가입
+          </Link>
+        </p>
+        <div className="social-login">
           <img src={kakaoIcon} alt="kakao" />
           <img src={naverIcon} alt="naver" />
           <img src={googleIcon} alt="google" />
